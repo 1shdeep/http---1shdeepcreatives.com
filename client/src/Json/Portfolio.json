@@ -1,0 +1,16 @@
+{
+  "_id": {
+    "$oid": "65ce01540c02e2613d4a66fa"
+  },
+  "title": "Sanjay Kumar",
+  "imageUrl": "https://www.1shdeepcreatives.com/lib/Cover%20images/03.jpg",
+  "videoUrl": "https://video/lib/Cover%20images/03.jpg",
+  "about": "Discover the power of stability and versatility with Manfrotto tripods through our digital commercial video. Unleash your creativity and elevate your photography and videography with the precision and reliability of Manfrotto's exceptional tripod systems.",
+  "createdAt": {
+    "$date": "2024-02-15T12:19:32.055Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-15T12:19:32.055Z"
+  },
+  "__v": 0
+}

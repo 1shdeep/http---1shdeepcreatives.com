@@ -1,0 +1,95 @@
+.quoteSection{
+  background: url("../../Assets/Quote/parallax1.1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  width: 80vw;
+  animation: moveRightLeft 1s ease-in-out ;
+}
+
+.quote {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  text-align: center!important;
+}
+
+p {
+  text-align: center;
+  font-weight: 100 !important;
+}
+
+.content h5 {
+  margin-top: 7vh;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #18d26e;
+}
+
+.leftQuote {
+  font-size: 1.5rem;
+  position: relative;
+  top: -1.2vh;
+  left: -40%;
+  color: #fff;
+}
+
+.rightQuote {
+  font-size:  1.5rem;
+  position: relative;
+  bottom: -1.2vh;
+  right: -40%;
+  color: #fff;
+}
+
+
+@keyframes moveRightLeft {
+  0% {
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+/* Custom styles for small screens */
+@media (max-width: 768px) {
+  .content {
+    width: 95vw;
+  }
+
+  .quoteSection{
+    padding: 0 5vw;
+    padding-top:6rem;
+    padding-bottom: 6rem;  
+  }
+
+  .content p{
+  font-size: 2.2rem;
+  }
+  
+  .content h5 {
+    font-size: 1.8rem;
+  }
+  
+.leftQuote {
+  left: -45%;
+}
+
+.rightQuote {
+  right: -45%;
+}
+
+}

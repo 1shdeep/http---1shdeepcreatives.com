@@ -1,0 +1,31 @@
+/* Footer styling */
+.footer {
+  background-color: #202020;
+  padding: 6vh 0;
+}
+
+/* Footer content styling */
+#footerContent {
+  font-size: 0.9vw;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(191, 191, 191) !important;
+  font-family: inherit;
+}
+
+.AgileSupport {
+  color: white;
+  font-weight: 800;
+  font-size: larger;
+  margin-top: 4px;
+}
+
+.AgileSupport:hover {
+  color: #FA6600;
+  font-weight: 800;
+  font-size: larger;
+}
+
+.subscribe {
+  justify-content: center;
+}

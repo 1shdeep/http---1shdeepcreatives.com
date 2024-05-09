@@ -1,0 +1,91 @@
+.client {
+  /* min-height: 100vh; */
+  background: url(../../Assets/BG/bg-1.jpg);
+}
+
+.client h2 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5vh;
+}
+.client .clientText {
+  font-size: 1.2rem;
+  font-weight: 500 !important;
+  color: white;
+  margin-bottom: 15vh;
+}
+
+.brandCol img{
+  width: 100%;
+  height: 20vh;
+  object-fit: fill;
+}
+
+.brandCol:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.circleImg {
+  animation: moveUpDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom styles for small screens */
+@media (max-width: 768px) {
+  #client h2 {
+    font-size: 1rem;
+  }
+  .client .clientText {
+    font-size: 0.8rem;
+    font-weight: 400 !important;
+    margin-bottom: 15vh;
+    line-height: 1.5;
+  }
+  .brandCol img{
+    height: 8vh;
+    object-fit: cover;
+  }
+  .circleImg{
+    width: 40%;
+  }
+  .client-row{
+    width: 100%;
+    padding: 0 3vw;
+  }
+  .clientText{
+    padding-left:3vw;
+    padding-right:3vw;
+    width: 100%;
+  }
+  
+}
+
+
+@media (min-width: 1540px) {
+  .client-row{
+    
+    max-width: 50%;
+  }
+  .brandCol img {
+    width: 100%;
+    height: 12vh;
+    object-fit: fill;
+}
+.client .clientText {
+  font-size: 1.2rem;
+  font-weight: 500 !important;
+  color: white;
+  margin-bottom: 15vh;
+  width: 35%;
+} 
+  }

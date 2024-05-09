@@ -1,5 +1,5 @@
 const Constants = {
-  BASE_URL: "http://localhost:5000/api",
+  BASE_URL: "https://1shdeepcreatives.com/api",
 };
 
 export default Constants;

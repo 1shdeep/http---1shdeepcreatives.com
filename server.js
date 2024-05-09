@@ -23,6 +23,10 @@ app.use("/api/testimonials", testimonialsRouter);
 app.use("/api/client", clientRouter);
 app.use("/api/admin", adminRouter);
 
+app.get("/api/health", (req, res) => {
+  res.send("fine");
+});
+
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });

@@ -5,6 +5,7 @@ const clientRouter = require("./routes/client");
 const adminRouter = require("./routes/admin");
 const connectDB = require("./db");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -23,7 +24,7 @@ app.use("/api/client", clientRouter);
 app.use("/api/admin", adminRouter);
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "Frontend/build", "index.html"));
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 // Start the server

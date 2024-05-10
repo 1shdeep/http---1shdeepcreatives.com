@@ -36,7 +36,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Projects/:projectId" element={<Projects />} />
-
           {/* {tokenAdmin ? ( */}
           <>
             <Route exact path="/Work" element={<WorkAdmin />} />
@@ -54,9 +53,8 @@ function App() {
             <Route exact path="/Uploads" element={<Uploads />} />
             <Route exact path="/Data" element={<Data />} />
           </>
-          {/* ) : ( 
-             <Route exact path="/login" element={<LoginPage />} /> 
-           )} */}
+          ) : (
+          <Route exact path="/login" element={<LoginPage />} />)
         </Routes>
         {!tokenAdmin && <Footer />}
       </Router>

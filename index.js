@@ -11,7 +11,6 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use("/", express.static(path.join(__dirname, "client/build")));
 connectDB();
 app.use(express.json());
 
@@ -25,10 +24,6 @@ app.use("/api/admin", adminRouter);
 
 app.get("/api/health", (req, res) => {
   res.send("fine");
-});
-
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 // Start the server

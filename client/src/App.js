@@ -53,6 +53,9 @@ function App() {
             <Route exact path="/Uploads" element={<Uploads />} />
             <Route exact path="/Data" element={<Data />} />
           </>
+          : ( 
+             <Route exact path="/login" element={<LoginPage />} /> 
+           )
           ) : (
           <Route exact path="/login" element={<LoginPage />} />)
         </Routes>

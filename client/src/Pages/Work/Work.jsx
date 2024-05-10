@@ -70,14 +70,16 @@ const Work = () => {
 
         {/* Card */}
 
-        <div className=" projectcardCont flex mt-1 flex-wrap">
-          {/* portfolioCard */}
+        <div className="p-4 w-11/12 mx-auto grid items-center gap-4 mt-1 lg:grid-cols-3 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 ">
           {portfolios.map((portfolio) => (
-            <div className="portfolioCard w-1/4 relative" key={portfolio._id}>
+            <div
+              className="portfolioCard felx relative items-center"
+              key={portfolio._id}
+            >
               <Link to={`/Projects/${portfolio._id}`}>
                 <img
-                  className="portfolioImg w-full"
-                  src={portfolio.imageUrl}
+                  className="min-w-64"
+                  src={"/test.jpg"}
                   alt={portfolio.title}
                 />
                 <div className="onHover absolute top-0">
@@ -90,7 +92,6 @@ const Work = () => {
               </Link>
             </div>
           ))}
-          {/* portfolioCard End */}
         </div>
 
         {/* Card End */}

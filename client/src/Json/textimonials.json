@@ -1,0 +1,15 @@
+{
+    "_id": {
+      "$oid": "65cdf8960c02e2613d4a66e4"
+    },
+    "client": "Anupama",
+    "logoUrl": "https://www.1shdeepcreatives.com/lib/Cover%20images/03.jpg",
+    "description": "web developer with a flair for bringing innovative UX design to life. 5 years of experience with javascript, php, html,css,angular,react,react native, vue,laravel and others. Passionate about implementing user friendly platforms.Seeking for a job in friendly and challenging enviroment and keen to learn new programming",
+    "createdAt": {
+      "$date": "2024-02-15T11:42:14.596Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-15T11:42:14.596Z"
+    },
+    "__v": 0
+  }

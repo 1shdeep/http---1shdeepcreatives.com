@@ -5,7 +5,7 @@ const connectDB = async () => {
   try {
     // await mongoose.connect(process.env.DB_URL, {
     await mongoose.connect(
-      "mongodb+srv://yashansh15:sJa0JgP4a2HbvrkB@cluster0.gtux1ev.mongodb.net"
+      "mongodb+srv://yashansh15:sJa0JgP4a2HbvrkB@cluster0.gtux1ev.mongodb.net/"
     );
     console.log("MongoDB connected");
   } catch (error) {

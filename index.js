@@ -3,6 +3,7 @@ const portfolioRouter = require("./routes/portfolio");
 const testimonialsRouter = require("./routes/testimonials");
 const clientRouter = require("./routes/client");
 const adminRouter = require("./routes/admin");
+const { createUser } = require("./migrations");
 const connectDB = require("./db");
 const cors = require("cors");
 const path = require("path");
@@ -30,6 +31,14 @@ app.use("/api/admin", adminRouter);
 app.get("/api/health", (req, res) => {
   res.send("fine");
 });
+
+async function connect() {
+  try {
+    createUser();
+  } catch (e) {
+    console.log(e);
+  }
+}
 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));

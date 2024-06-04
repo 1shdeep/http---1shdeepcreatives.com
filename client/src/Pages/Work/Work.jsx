@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  createPortfolio,
-  getPortfolioByIdOrAll,
-  deletePortfolio,
-} from "../../services/portfolioService";
+import { createPortfolio, getPortfolioByIdOrAll, deletePortfolio } from "../../services/portfolioService";
 import "./Work.css";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
@@ -39,7 +35,7 @@ const Work = () => {
           </h4>
         </Fade>
         {/* List */}
-        <div className="relative right-2/4 translate-x-2/4 flex gap-6 justify-center items-center mt-24">
+        <div className="relative right-2/4 translate-x-2/4 flex gap-6 justify-center items-center mt-24 portfolioCategories">
           <a className="portfolioCategory" href="">
             <p className="font-primary">
               All <span className="diamond relative">&#x2BC1;</span>
@@ -68,33 +64,20 @@ const Work = () => {
         </div>
         {/* List End */}
 
-        {/* Card */}
-
-        <div className="p-4 w-11/12 mx-auto grid items-center gap-4 mt-1 lg:grid-cols-3 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 ">
+        <div className="projectCardContainer justify-center flex mt-1 flex-wrap">
           {portfolios.map((portfolio) => (
-            <div
-              className="portfolioCard felx relative items-center"
-              key={portfolio._id}
-            >
+            <div className="portfolioCard max-w-[350px] relative" key={portfolio._id}>
               <Link to={`/Projects/${portfolio._id}`}>
-                <img
-                  className="min-w-64"
-                  src={"/test.jpg"}
-                  alt={portfolio.title}
-                />
+                <img className="portfolioImg" src={portfolio.imageUrl} alt={portfolio.title} />
                 <div className="onHover absolute top-0">
                   <div className="textContainer m-4">
-                    <h5 className="font-primary w-full text-white ml-4">
-                      {portfolio.title}
-                    </h5>
+                    <h5 className="font-primary w-full text-white ml-4">{portfolio.title}</h5>
                   </div>
                 </div>
               </Link>
             </div>
           ))}
         </div>
-
-        {/* Card End */}
       </div>
     </div>
   );

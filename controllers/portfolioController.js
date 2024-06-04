@@ -1,64 +1,12 @@
 const Portfolio = require('../models/portfolio');
-const Contact = require('../models/contact');
 const { sendSuccessResponse, sendFailureResponse } = require('../helpers/responseHelper');
 
 // Create a new Portfolio
 const createPortfolio = async (req, res) => {
   try {
-    const {
-      bannerUrl,
-      aboutUrl,
-      title,
-      imageUrl,
-      videoUrl,
-      about,
-      workUrl_1,
-      workUrl_2,
-      workUrl_3,
-      workUrl_4,
-      workUrl_5,
-      workUrl_6,
-      workUrl_7,
-      workUrl_8,
-      workUrl_9,
-      workUrl_10,
-      workUrl_11,
-      workUrl_12,
-      workUrl_13,
-      workUrl_14,
-      workUrl_15,
-      workUrl_16,
-      workUrl_17,
-      workUrl_18
-    } = req.body;
+    const { title, imageUrl, videoUrl, about } = req.body;
 
-    const portfolio = new Portfolio({  
-      bannerUrl,
-      aboutUrl,
-      title,
-      imageUrl,
-      videoUrl,
-      about,
-      workUrl_1,
-      workUrl_2,
-      workUrl_3,
-      workUrl_4,
-      workUrl_5,
-      workUrl_6,
-      workUrl_7,
-      workUrl_8,
-      workUrl_9,
-      workUrl_10,
-      workUrl_11,
-      workUrl_12,
-      workUrl_13,
-      workUrl_14,
-      workUrl_15,
-      workUrl_16,
-      workUrl_17,
-      workUrl_18 
-    });
-    
+    const portfolio = new Portfolio({ title, imageUrl, videoUrl, about });
     await portfolio.save();
 
     return sendSuccessResponse(res, 'Portfolio created successfully', portfolio, 201);
@@ -89,104 +37,29 @@ const getPortfolioByIdOrAll = async (req, res) => {
   }
 };
 
-const getPortfolioListNameLogo = async (req, res) => {
-  try {
-  
-      const portfolio = await Portfolio.find({},{ imageUrl:1, _id:1, title: 1 }).sort({ createdAt: -1 }).exec();
-      return sendSuccessResponse(res, 'Portfolio retrieved successfully', portfolio);
+// // Edit a product by ID
+// const editProduct = async (req, res) => {
+//   try {
+//     const productId = req.params.id;
+//     const { name, sku, qty, price } = req.body;
 
-  } catch (error) {
-    console.error(error);
-    return sendFailureResponse(res, 'Internal server error', 500);
-  }
-};
+//     // Find the product by ID and update its properties
+//     const product = await Product.findByIdAndUpdate(
+//       productId,
+//       { name, sku, qty, price },
+//       { new: true } // Return the updated product
+//     );
 
-const getPortfolioById = async (req, res) => {
-  try {
-    const { portfolioId } = req.params;
+//     if (!product) {
+//       return sendFailureResponse(res, 'Product not found', 404);
+//     }
 
-    const portfolio = await Portfolio.findOne({ _id: portfolioId }).exec();
-      if (!portfolio) {
-        return sendFailureResponse(res, 'Portfolio not found', 404);
-      }
-      return sendSuccessResponse(res, 'Portfolio retrieved successfully', portfolio);
-
-  } catch (error) {
-    console.error(error);
-    return sendFailureResponse(res, 'Internal server error', 500);
-  }
-};
-
-// Edit a product by ID
-const editPortfolio = async (req, res) => {
-  try {
-    const { portfolioId } = req.params;
-
-    const { bannerUrl,
-      aboutUrl,
-      title,
-      imageUrl,
-      videoUrl,
-      about,
-      workUrl_1,
-      workUrl_2,
-      workUrl_3,
-      workUrl_4,
-      workUrl_5,
-      workUrl_6,
-      workUrl_7,
-      workUrl_8,
-      workUrl_9,
-      workUrl_10,
-      workUrl_11,
-      workUrl_12,
-      workUrl_13,
-      workUrl_14,
-      workUrl_15,
-      workUrl_16,
-      workUrl_17,
-      workUrl_18 } = req.body;
-
-    // Find the product by ID and update its properties
-    const portfolio = await Portfolio.findByIdAndUpdate(
-      portfolioId,
-      { bannerUrl,
-        aboutUrl,
-        title,
-        imageUrl,
-        videoUrl,
-        about,
-        workUrl_1,
-        workUrl_2,
-        workUrl_3,
-        workUrl_4,
-        workUrl_5,
-        workUrl_6,
-        workUrl_7,
-        workUrl_8,
-        workUrl_9,
-        workUrl_10,
-        workUrl_11,
-        workUrl_12,
-        workUrl_13,
-        workUrl_14,
-        workUrl_15,
-        workUrl_16,
-        workUrl_17,
-        workUrl_18 },
-      { new: true } // Return the updated product
-    );
-
-    if (!portfolio) {
-      return sendFailureResponse(res, 'Portfolio not found', 404);
-    }
-
-    return sendSuccessResponse(res, 'Portfolio updated successfully', portfolio);
-  } catch (error) {
-    console.error(error);
-    return sendFailureResponse(res, 'Internal server error', 500);
-  }
-};
+//     return sendSuccessResponse(res, 'Product updated successfully', product);
+//   } catch (error) {
+//     console.error(error);
+//     return sendFailureResponse(res, 'Internal server error', 500);
+//   }
+// };
 
 // Delete a product by ID
 const deletePortfolio = async (req, res) => {
@@ -208,50 +81,9 @@ const deletePortfolio = async (req, res) => {
 };
 
 
-const createContact = async (req, res) => {
-  try {
-    const {
-      name,
-      email,
-      phone,
-      message
-    } = req.body;
-
-    const contact = new Contact({  
-      name,
-      email,
-      phone,
-      message
-    });
-    
-    await contact.save();
-
-    return sendSuccessResponse(res, 'Contact created successfully', contact, 201);
-  } catch (error) {
-    console.error(error);
-    return sendFailureResponse(res, 'Internal server error', 500);
-  }
-};
-
-const getContact = async (req, res) => {
-  try {
-  
-      const contact = await Contact.find({ }).sort({ createdAt: -1 }).exec();
-      return sendSuccessResponse(res, 'Contact retrieved successfully', contact);
-
-  } catch (error) {
-    console.error(error);
-    return sendFailureResponse(res, 'Internal server error', 500);
-  }
-};
-
 module.exports = {
   createPortfolio,
   getPortfolioByIdOrAll,
-  editPortfolio,
-  deletePortfolio,
-  getPortfolioById,
-  getPortfolioListNameLogo,
-  createContact,
-  getContact
+  // editProduct,
+  deletePortfolio
 };

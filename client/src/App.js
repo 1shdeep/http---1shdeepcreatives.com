@@ -11,7 +11,6 @@ import Projects from "./Components/Projects/Projects.jsx";
 import WorkAdmin from "./AdminPanel/Work-Admin.jsx";
 import ClientAdmin from "./AdminPanel/Clients-Admin.jsx";
 import TestimonialAdmin from "./AdminPanel/Testimonials-Admin.jsx";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WorkList from "./AdminPanel/WorkList.jsx";
 import ClientList from "./AdminPanel/ClientList.jsx";
@@ -31,8 +30,6 @@ function App() {
   return (
     <>
       <Router>
-        {!tokenAdmin && <Navbar />}
-
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Projects/:projectId" element={<Projects />} />
@@ -53,12 +50,9 @@ function App() {
             <Route exact path="/Uploads" element={<Uploads />} />
             <Route exact path="/Data" element={<Data />} />
           </>
-            : ( 
-             <Route exact path="/login" element={<LoginPage />} /> 
-           )
-
+          : (
+          <Route exact path="/login" element={<LoginPage />} />)
         </Routes>
-        {!tokenAdmin && <Footer />}
       </Router>
     </>
   );

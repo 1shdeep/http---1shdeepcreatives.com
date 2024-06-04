@@ -119,7 +119,7 @@
   }
   
   .about-card {
-    width: 200%; /* Make cards full width on tablet screens */
+    width: 125%; /* Make cards full width on tablet screens */
   }
   
   .about-content {

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 import "./Projects.css";
 import { Link, useParams } from "react-router-dom";
 import {
@@ -71,9 +73,11 @@ const Projects = () => {
   const videoId = "tgbNymZ7vqY"; // Replace with desired video ID
 
   return (
-    <div className="projects">
-      <div className="bannerVideo relative h-screen">
-        {/* <iframe
+    <>
+      <Navbar />
+      <div className="projects">
+        <div className="bannerVideo relative h-screen">
+          {/* <iframe
           className="absolute top-0 left-0 object-cover w-full h-full"
           // height="315"
           autoPlay
@@ -85,38 +89,38 @@ const Projects = () => {
           loop
         ></iframe> */}
 
-        <ReactPlayer
-          url={portfolios.bannerUrl}
-          playing={true} // Autoplay (ensure user consent for autoplay)
-          muted={true}
-          width="100%"
-          height="100%"
-          controls={false} // Include player controls
-          loop
-        />
+          <ReactPlayer
+            url={portfolios.bannerUrl}
+            playing={true} // Autoplay (ensure user consent for autoplay)
+            muted={true}
+            width="100%"
+            height="100%"
+            controls={false} // Include player controls
+            loop
+          />
 
-        {/* <iframe src={portfolios.bannerUrl} allow="autoplay" muted height="90%" width="100%" frameborder="0"></iframe> */}
+          {/* <iframe src={portfolios.bannerUrl} allow="autoplay" muted height="90%" width="100%" frameborder="0"></iframe> */}
 
-        {/* <video src="" controls autoPlay width="500"  > 
+          {/* <video src="" controls autoPlay width="500"  > 
             <source src="https://www.1shdeepcreatives.com/film/img/Earthen%20soil%20/video2.mp4" type="video/mp4" />
           </video> */}
 
-        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ciLGHX_mq48?si=qopymlBfmnqEsJSd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" autoPlay={false}  allowfullscreen></iframe> */}
+          {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ciLGHX_mq48?si=qopymlBfmnqEsJSd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" autoPlay={false}  allowfullscreen></iframe> */}
 
-        <script>var player = new MediaElementPlayer('#player1');</script>
-      </div>
-
-      <div className="aboutProject container mx-auto py-16 flex gap-40 flex-col md:flex-row items-start">
-        {/* <div className="aboutProject md:w-1/2 md:pr-8 mb-6 md:mb-0"> */}
-
-        <div className=" w-full mb-6 md:mb-0">
-          <h2 className="heading text-3xl text-white-700 font-bold mb-4 md:text-left">
-            ABOUT PROJECT
-          </h2>
-          <p className="text-lg text-white-700">{portfolios.about}</p>
+          <script>var player = new MediaElementPlayer('#player1');</script>
         </div>
-        <div className="aboutProjectVideo">
-          {/* <video
+
+        <div className="aboutProject container mx-auto py-16 flex gap-40 flex-col md:flex-row items-start">
+          {/* <div className="aboutProject md:w-1/2 md:pr-8 mb-6 md:mb-0"> */}
+
+          <div className=" w-full mb-6 md:mb-0">
+            <h2 className="heading text-3xl text-white-700 font-bold mb-4 md:text-left">
+              ABOUT PROJECT
+            </h2>
+            <p className="text-lg text-white-700">{portfolios.about}</p>
+          </div>
+          <div className="aboutProjectVideo">
+            {/* <video
             className="w-full object-cover h-full"
             src={portfolios.aboutUrl}
             frameborder="0"
@@ -126,44 +130,44 @@ const Projects = () => {
             allowfullscreen
             loop
           ></video> */}
-          <ReactPlayer
-            // className="w-full object-cover h-full "
-            className="aboutVideo"
-            url={portfolios.aboutUrl}
-            playing={true} // Autoplay (ensure user consent for autoplay)
-            muted={true}
-            controls={false}
-            loop
-          />
+            <ReactPlayer
+              // className="w-full object-cover h-full "
+              className="aboutVideo"
+              url={portfolios.aboutUrl}
+              playing={true} // Autoplay (ensure user consent for autoplay)
+              muted={true}
+              controls={false}
+              loop
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="WorkDiv container mx-auto py-16">
-        <h2 className="heading text-3xl font-bold mb-8 text-center">Works</h2>
-        <div className="swiperDiv">
-          <Swiper
-            freeMode={true}
-            navigation={false} // Enable navigation
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 36,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 15,
-              },
-            }}
-            modules={[Autoplay]}
-            className="mySwiper"
-          >
-            {videoUrls.map((url, index) => (
-              <SwiperSlide key={index}>
-                {/* <video
+        <div className="WorkDiv container mx-auto py-16">
+          <h2 className="heading text-3xl font-bold mb-8 text-center">Works</h2>
+          <div className="swiperDiv">
+            <Swiper
+              freeMode={true}
+              navigation={false} // Enable navigation
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 36,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 15,
+                },
+              }}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
+              {videoUrls.map((url, index) => (
+                <SwiperSlide key={index}>
+                  {/* <video
                   className="customVideo"
                   src={url}
                   autoPlay
@@ -175,82 +179,86 @@ const Projects = () => {
                   allowfullscreen
                   loop
                 ></video> */}
-                <ReactPlayer
-                  className="customVideo"
-                  url={url}
-                  playing={true} // Autoplay (ensure user consent for autoplay)
-                  muted={true}
-                  controls={false}
-                  // title="YouTube video player"
-                  // frameborder="0"
-                  // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  // allowfullscreen
-                  // loop
-                  loop
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  <ReactPlayer
+                    className="customVideo"
+                    url={url}
+                    playing={true} // Autoplay (ensure user consent for autoplay)
+                    muted={true}
+                    controls={false}
+                    // title="YouTube video player"
+                    // frameborder="0"
+                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    // allowfullscreen
+                    // loop
+                    loop
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
 
-      <div className="container mx-auto py-16">
-        <h2 className="heading text-center text-3xl font-bold mb-8">
-          Our Other Projects
-        </h2>
-        {/* New Changes Started */}
-        <div className="workDiv flex mt-1 flex-wrap">
-          {/* portfolioCard */}
-          {portfolioList.map((portfolio, index) => (
-            <div
-              className="portfolioCard w-1/4 md:w-1/4 sm:w-2/4 relative"
-              key={index}
-              onClick={() =>
-                (window.location.href = `/Projects/${portfolio._id}`)
-              }
-            >
-              <img
-                className="portfolioImg w-full"
-                src={portfolio.imageUrl}
-                alt="Project 1"
-              />
-              <div className="onHover absolute top-0">
-                <div className="textContainer m-4">
-                  <h5 className="font-primary w-full text-white ml-4">
-                    {portfolioList.title}
-                  </h5>
+        <div className="container mx-auto py-16">
+          <h2 className="heading text-center text-3xl font-bold mb-8">
+            Our Other Projects
+          </h2>
+          {/* New Changes Started */}
+          <div className="workDiv justify-center flex mt-1 flex-wrap">
+            {/* portfolioCard */}
+            {portfolioList.map((portfolio, index) => (
+              <div
+                className="portfolioCard w-1/4 md:w-1/4 sm:w-2/4 relative"
+                key={index}
+                onClick={() =>
+                  (window.location.href = `/Projects/${portfolio._id}`)
+                }
+              >
+                <img
+                  className="portfolioImg w-full"
+                  src={portfolio.imageUrl}
+                  alt="Project 1"
+                />
+                <div className="onHover absolute top-0">
+                  <div className="textContainer m-4">
+                    <h5 className="font-primary w-full text-white ml-4">
+                      {portfolioList.title}work 1
+                    </h5>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          {/* portfolioCard End */}
-        </div>
-        {/* New Changes Ended */}
-      </div>
-
-      <div className="container mx-auto py-16">
-        <h2 className="heading text-3xl font-bold mb-8">Let's Get in Touch</h2>
-        <div className="contactDiv flex flex-col md:flex-row items-center gap-8">
-          {/* <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0"> */}
-          <div className="w-full mb-6 md:mb-0">
-            <h3 className="heading text-xl font-semibold mb-2">
-              1SHDEEP CREATIVES
-            </h3>
-            <p className="md:text-left">
-              F. No 2/6 Panchwati Complex, 3B Saket Nagar, Bhopal.
-              <br />
-              Mobile: +91 9179940591
-              <br />
-              Email: vanshdeepofficial@gmail.com
-              <br />
-              Mon-Fri: 9am to 6pm
-            </p>
+            ))}
+            {/* portfolioCard End */}
           </div>
+          {/* New Changes Ended */}
+        </div>
 
-          <Contact />
+        <div className="container mx-auto py-16">
+          <h2 className="heading text-3xl font-bold mb-8">
+            Let's Get in Touch
+          </h2>
+          <div className="contactDiv flex flex-col md:flex-row items-center gap-8">
+            {/* <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0"> */}
+            <div className="w-full mb-6 md:mb-0">
+              <h3 className="heading text-xl font-semibold mb-2">
+                1SHDEEP CREATIVES
+              </h3>
+              <p className="md:text-left">
+                F. No 2/6 Panchwati Complex, 3B Saket Nagar, Bhopal.
+                <br />
+                Mobile: +91 9179940591
+                <br />
+                Email: vanshdeepofficial@gmail.com
+                <br />
+                Mon-Fri: 9am to 6pm
+              </p>
+            </div>
+
+            <Contact />
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

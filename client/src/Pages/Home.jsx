@@ -1,5 +1,7 @@
 import Hero from "./Hero/Hero";
 import About from "./About/About"
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer"
 import Work from "./Work/Work"
 import Clients from "./Clients/Clients"
 import Quote from "./Quote/Quote"
@@ -13,12 +15,14 @@ function Home() {
   return (
     <>
       {/* <FontAwesomeIcon icon={faEnvelope} /> */}
+    <Navbar/>
       <Hero />
       <About/>
       <Work/>
       <Clients/>
       <Quote/>
       <Testimonials/>
+      <Footer/>
     </>
   );
 }

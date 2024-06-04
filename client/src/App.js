@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import Home from "./Pages/Home.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
-import Footer from "./Components/Footer/Footer.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx";
 import AdminPanel from "./AdminPanel/AdminPanel.jsx";
 import Uploads from "./AdminPanel/Uploads.jsx";
@@ -27,29 +26,13 @@ import PrivateRouteAdmin from './utilities/Authorize/PrivateRouteAdmin';
     );
   }
 
-  // const [tokenAdmin, setToken] = useState(null);
-
-  // useEffect(() => {
-  //   const storedToken = localStorage.getItem("adminToken");
-  //   if (storedToken) {
-  //     setToken(storedToken);
-  //   }
-  // }, []);
-
       function AppContent() {
-
-        const location = useLocation();
-        const pathname = location.pathname;
-      
-        // const isHeaderVisible = !(pathname === '/admin/login' || pathname === '/user/login' || pathname === '/');
-      
+  
         return (
-      
-          // <div className='content h-100'>
+  
           <>
-            {/* {isHeaderVisible && <Header />} */}
             <Routes>
-      
+           
             <Route exact path="/" element={<Home />} />
             <Route exact path="/Projects/:projectId" element={<Projects />} />
 

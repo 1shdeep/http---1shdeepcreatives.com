@@ -7,8 +7,20 @@ const { validateCreatePortfolio } = require('../validations/portfolioValidation'
 
 router.post('/', validateCreatePortfolio, PortfolioController.createPortfolio);
 
+router.post('/contact', PortfolioController.createContact);
+router.get('/contact', PortfolioController.getContact);
+
 // Get a single Portfolio or All
 router.get('/', PortfolioController.getPortfolioByIdOrAll);
+
+// Get a single Portfolio or All
+router.get('/listNameLogo', PortfolioController.getPortfolioListNameLogo);
+
+// Edit a Portfolio by ID
+router.put('/:portfolioId', PortfolioController.editPortfolio);
+
+// Get a single Portfolio or All
+router.get('/:portfolioId', PortfolioController.getPortfolioById);
 
 // Delete a Portfolio by ID
 router.delete('/:id', PortfolioController.deletePortfolio);

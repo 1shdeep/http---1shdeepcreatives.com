@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 import { loginAdmin } from '../services/loginService';
+import  Constants  from '../utilities/constants';
+import { Navigate } from 'react-router-dom';
 
 const LoginPage = () => {
 
   const navigate = useNavigate();
 
+  const { adminloggedIn } = Constants.getTokens();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -40,6 +43,10 @@ const LoginPage = () => {
       console.error('Error logging in:', error);
     }
   };
+
+  if(adminloggedIn){
+    return <Navigate to={"/Work"} />
+  }
 
   return (
     <div className='login-page'>

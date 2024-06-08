@@ -40,15 +40,22 @@ swiperslide {
 .testimonial-post:focus a {
   color: #18d26e;
 }
+
 .testimonial-two .testimonial-para:before {
   display: block;
   font-size: 28px;
   color: #acacac;
   margin-bottom: 15px;
-  content: "\f10d";
-  font-weight: 700;
-  font-family: "Font Awesome 5 Free";
+  content: ""; /* Remove the content property */
+  background-image: url('../../Assets/Testimonials/quote.png'); /* Add the URL of your quote image */
+  background-size: contain; /* Adjust background size as needed */
+  background-repeat: no-repeat; /* Prevent repetition */
+  width: 25px; /* Adjust width as needed */
+  height: 25px; /* Adjust height as needed */
+  margin-right: 10px; /* Add margin for spacing */
 }
+
+
 .main-title {
   position: relative;
   margin-bottom: 6rem;

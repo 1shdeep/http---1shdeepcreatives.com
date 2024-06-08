@@ -48,7 +48,7 @@ const ContactList = ( ) => {
     <div className="flex items-center h-screen bg-gray-100">
       <Sidebar />
       <div className="flex flex-col justify-center items-center flex-grow">
-      <button onClick={handleDownload}>Download Emails</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mb-2 px-4 rounded" onClick={handleDownload}>Download Emails</button>
         <div
           className="w-full max-w-xl overflow-y-auto"
           style={{ maxHeight: "70vh", width:"75vh"}}

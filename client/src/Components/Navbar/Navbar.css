@@ -12,21 +12,36 @@ nav li a:hover {
   color: #f1c30f;
 }
 
-.social-Container{
-    margin-left: 8.5vw;
+.social-Container {
+  margin-left: 8.5vw;
 }
+
 .social-icon {
   font-size: 1.5rem;
   margin: 0 0.5vw;
 }
+
 .dropDownMenu {
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.25)!important;
-  backdrop-filter: blur(8px)!important;
-  -webkit-backdrop-filter: blur(4px)!important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 99999;
+}
+
+.dropDownMenu.open {
+  height: 100vh;
+  opacity: 1;
 }
 
 .btnContainer li {
@@ -38,18 +53,33 @@ nav li a:hover {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+.close-icon {
+  position: fixed;
+  top: 2.2rem;
+  right: 4.3rem;
+  z-index: 100000;
+}
 
+@media (max-width: 768px) {
   .btnContainer li a {
     font-size: 1.2rem;
   }
-  .social-Container{
+
+  .social-Container {
     margin-left: -5vw;
-}
-  .social-icon{
+  }
+
+  .social-icon {
     font-size: 1.2rem;
   }
-  .contact{
+
+  .contact {
     display: none;
+  }
+  .close-icon {
+    position: fixed;
+    top: 2.2rem;
+    right: 2rem;
+    z-index: 100000;
   }
 }

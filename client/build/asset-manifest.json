@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe86051d.css",
-    "main.js": "/static/js/main.7c09988b.js",
+    "main.css": "/static/css/main.ef27407d.css",
+    "main.js": "/static/js/main.07aa7d19.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.d320dc14.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.80bea96a.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.02016cbc.chunk.js",
@@ -24,9 +24,10 @@
     "static/media/bg-1.jpg": "/static/media/bg-1.87c56f9a980c9b669bfc.jpg",
     "static/media/parallax1.1.png": "/static/media/parallax1.1.dc16044b03d3cddc02d7.png",
     "static/media/team-circle.png": "/static/media/team-circle.cd996e7531afc44ad74e.png",
+    "static/media/quote.png": "/static/media/quote.ffbdf04cae201122fd74.png",
     "index.html": "/index.html",
-    "main.fe86051d.css.map": "/static/css/main.fe86051d.css.map",
-    "main.7c09988b.js.map": "/static/js/main.7c09988b.js.map",
+    "main.ef27407d.css.map": "/static/css/main.ef27407d.css.map",
+    "main.07aa7d19.js.map": "/static/js/main.07aa7d19.js.map",
     "reactPlayerYouTube.d320dc14.chunk.js.map": "/static/js/reactPlayerYouTube.d320dc14.chunk.js.map",
     "reactPlayerSoundCloud.80bea96a.chunk.js.map": "/static/js/reactPlayerSoundCloud.80bea96a.chunk.js.map",
     "reactPlayerVimeo.02016cbc.chunk.js.map": "/static/js/reactPlayerVimeo.02016cbc.chunk.js.map",
@@ -44,7 +45,7 @@
     "787.abe25411.chunk.js.map": "/static/js/787.abe25411.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe86051d.css",
-    "static/js/main.7c09988b.js"
+    "static/css/main.ef27407d.css",
+    "static/js/main.07aa7d19.js"
   ]
 }

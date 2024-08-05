@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
 
     document.body.style.overflow = isOpen ? "auto" : "hidden";
   };

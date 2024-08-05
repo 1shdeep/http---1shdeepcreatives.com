@@ -17,7 +17,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
     //window.scrollTo(0, 0);
 
-    document.body.style.overflow = isOpen ? "auto" : "hidden";
+    //document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
   const closeMenu = () => {

@@ -169,7 +169,10 @@ const Navbar = () => {
                       Contact Us
                     </a>
                   ) : (
-                    <a href="/#clients" onClick={closeMenu}>
+                    <a
+                      href="mailto:vanshdeepofficial@gmail.com"
+                      onClick={closeMenu}
+                    >
                       Contact Us
                     </a>
                   )}

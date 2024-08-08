@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
-import { FaBars, FaTimes, FaInstagram } from "react-icons/fa";
+import { FaBars, FaTimes} from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";

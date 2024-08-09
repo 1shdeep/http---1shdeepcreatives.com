@@ -6,7 +6,7 @@ import BG from "../../Assets/Hero-Video/slider-video.mp4";
 
 const HeroSection = () => {
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="home">
       <video className="hero-video" playsInline autoPlay loop muted>
         <source src={BG} type="video/mp4" />
         Your browser does not support the video tag.

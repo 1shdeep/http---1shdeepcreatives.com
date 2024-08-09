@@ -221,7 +221,7 @@ const Projects = () => {
                 <div className="onHover absolute top-0">
                   <div className="textContainer m-4">
                     <h5 className="font-primary w-full text-white ml-4">
-                      {portfolioList.title}work 1
+                      {portfolioList.title}
                     </h5>
                   </div>
                 </div>

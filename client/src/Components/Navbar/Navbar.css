@@ -1,71 +1,61 @@
-nav {
-  position: fixed;
+/* Navbar.css */
+
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent background */
+  box-shadow: none; /* Remove shadow */
+  position: sticky;
   top: 0;
-  /* background-color: #202020; */
-  /* border: 2px solid red; */
-  z-index: 100000;
-  width: 100vw;
-  /* background */
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(4px);
+  z-index: 16;
 }
 
-nav li a:hover {
-  color: #f1c30f;
-}
-
-.social-Container{
-  /* border: 2px solid white; */
-    margin-left: 8.5vw;
-}
-.social-icon {
-  font-size: 1.5rem;
-  margin: 0 0.5vw;
-}
-.dropDownMenu {
-  height: 100vh;
+/* Left and Right Sections */
+.navbar-left, .navbar-right {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  /* background */
-  background: rgba(0, 0, 0, 0.25)!important;
-  backdrop-filter: blur(8px)!important;
-  -webkit-backdrop-filter: blur(4px)!important;
+  gap: 15px;
 }
 
-.btnContainer li {
-  margin-bottom: 3.6vh;
+/* Center Logo */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.btnContainer li a {
-  /* border: 2px solid  blue; */
-  font-size: 1.7rem;
-  font-weight: 700;
+.logo img{
+  width: 50px;
+  height: 50px;
 }
 
-/* Custom styles for small screens */
+/* Icons */
+.menu-icon, .search-icon, .profile-icon, .cart-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon, .search-icon, .profile-icon, .cart-icon {
+  font-size: 24px; /* Adjust icon size */
+  color: #fff; /* Set icons to white or another visible color */
+}
+
+/* Hover Effects */
+.menu-icon:hover, .search-icon:hover, .profile-icon:hover, .cart-icon:hover {
+  color: #ccc; /* Slightly lighter color on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  /* .text-white{
-        font-size: 15px;
-        margin-right: 10px;
-    }  
-    .contact
-    {
-        display: none;
-    } */
-  .btnContainer li a {
-    font-size: 1.2rem;
+  .navbar {
+    padding: 10px;
   }
-  .social-Container{
-    /* border: 2px solid red; */
-    margin-left: -5vw;
-}
-  .social-icon{
-    font-size: 1.2rem;
-  }
-  .contact{
-    display: none;
+
+  .menu-icon, .search-icon, .profile-icon, .cart-icon {
+    font-size: 20px;
   }
 }

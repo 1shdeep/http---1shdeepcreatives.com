@@ -5,19 +5,20 @@ import { IoIosPeople } from "react-icons/io";
 import { MdWork } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { VscSignOut } from "react-icons/vsc";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { CiBoxList } from "react-icons/ci";
 
 export default function Sidebar() {
+
   const navigate = useNavigate();
   let token = null;
   const handleLogout = () => {
-    localStorage.removeItem("adminToken");
-    navigate("/Login");
+    localStorage.removeItem('adminToken');
+    navigate('/admin/login');
   };
-
-  if (localStorage.getItem("adminToken")) {
-    token = localStorage.getItem("adminToken");
+ 
+  if(localStorage.getItem('adminToken')){
+    token = localStorage.getItem('adminToken'); 
   }
 
   return (
@@ -29,12 +30,12 @@ export default function Sidebar() {
           </div>
           <div className="flex-1">
             <ul className="pt-2 pb-4 space-y-1 text-sm">
-              <li className="border-t border-gray-200 rounded-sm hover:bg-gray-100">
+              <li className="rounded-sm hover:bg-gray-100">
                 <Link
                   className="flex items-center p-2 space-x-3 rounded-md"
                   to="/Work"
                 >
-                  <MdWork style={{ width: "24px", height: "24px" }} />
+                  <MdWork style={{ width: "24px", height: "24px" }} />{" "}
                   <span>Work</span>
                 </Link>
               </li>

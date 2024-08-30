@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    /* Equivalent to text-4xl */
+    font-weight: 100;
+    /* Equivalent to font-thin */
+    margin-bottom: 1.5rem;
+    /* Equivalent to mb-6 */
+}
+
+.tagline {
+    font-size: 1.125rem;
+    width: 395px;
+    width: 395px;
+}
+
+.flip-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.5) rotateX(90deg);
+  /* Start small and rotated */
+  transform-origin: bottom;
+  transition: opacity 0.6s, transform 0.6s ease-out;
+}
+
+.flip-word.active {
+  opacity: 1;
+  transform: scale(1) rotateX(0deg);
+  /* Zoom in to original size */
+  transform-origin: bottom;
+}
+
+.flip-text{
+    font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+    h5 span {
+        font-size: 3rem !important;
+        font-weight: 200;
+        margin-bottom: 0.2vh;
+    }
+}

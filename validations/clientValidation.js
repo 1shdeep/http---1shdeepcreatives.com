@@ -2,7 +2,7 @@ const Joi = require('joi');
 const { validateRequest } = require('./validationMiddleware');
 
 const createClientSchema = Joi.object({
-  logoUrl: Joi.string().required()
+  clientName: Joi.string().required()
 });
 
 const validateCreateClient = validateRequest(createClientSchema);

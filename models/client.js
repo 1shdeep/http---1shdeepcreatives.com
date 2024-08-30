@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const clientSchema = new mongoose.Schema({
-  logoUrl: {
+  clientName: {
     type: String
   }
 },{

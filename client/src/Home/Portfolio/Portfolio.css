@@ -1,0 +1,89 @@
+/* Portfolio.css */
+.portfolio-section {
+  padding: 60px 30px;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: -50px;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-header h2 {
+  font-size: 68px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+}
+
+.portfolio-header p {
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* SWIPER */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-slide {
+  margin-right: 20px !important;
+}
+
+.portfolio-card{
+    text-align: left;
+}
+
+.portfolio-card h3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* .portfolio-slide {
+    display: flex;
+    justify-content: center;
+    margin-right: 36px !important;
+  } */
+
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-header h2 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .portfolio-header p {
+    text-align: center;
+  }
+}

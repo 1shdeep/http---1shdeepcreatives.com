@@ -1,0 +1,132 @@
+/* General Styles */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 50%;
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    font-size: 90px;
+    line-height: 1.2;
+    font-weight: bold;
+    width: max-content;
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.description {
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.image-container {
+    max-width: 50%;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .about-section {
+        padding: 30px;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .contact-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-container {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+        width: auto;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+
+    .about-contact {
+        justify-content: center;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
+    }
+}

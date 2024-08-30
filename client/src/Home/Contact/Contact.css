@@ -1,0 +1,93 @@
+.contact-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+.contact-heading {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.contact-arrow {
+    font-size: 3em;
+    margin-left: auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-item {
+    max-width: 30%;
+}
+
+.contact-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.si {
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-heading {
+        font-size: 54px;
+    }
+
+    .contact-content,
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .contact-arrow {
+        align-self: flex-end;
+    }
+
+    .contact-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,75 @@
+.projects-section {
+    position: relative;
+    color: white;
+    background-color: black;
+}
+
+.projects-heading {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.projects-heading h1 {
+    font-size: 68px;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.projects-heading p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.projects-images {
+    position: relative;
+}
+
+.projects-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.projects-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.company-names-bar {
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.company-name {
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.project-section{
+    flex-direction: column;
+}
+}

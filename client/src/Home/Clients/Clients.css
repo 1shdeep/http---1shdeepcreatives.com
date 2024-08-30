@@ -1,0 +1,55 @@
+.clients-section {
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+    background-color: #000;
+    /* Black background */
+}
+
+.clients-section h2 {
+    font-size: 45px;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.clients-section p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.client-card {
+    background-color: #222;
+    padding: 40px 0;
+    font-size: 18px;
+    display: flex;
+    height: 24vh;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.client-card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

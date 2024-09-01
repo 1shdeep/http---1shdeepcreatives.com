@@ -6,6 +6,7 @@ import Work from "./Work/Work"
 import Clients from "./Clients/Clients"
 import Quote from "./Quote/Quote"
 import Testimonials from "./Testimonials/Testimonials";
+import Blog from "./Blog/Blog";
 
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,6 +23,7 @@ function Home() {
       <Clients/>
       <Quote/>
       <Testimonials/>
+      <Blog />
       <Footer/>
     </>
   );

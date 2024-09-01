@@ -32,19 +32,27 @@ const Blog = () => {
           industry. Lorem Ipsum has been the industry's standard dummy.
         </p>
       </div>
-      {blogs.map((blog) => (
-        <div key={blog.id} className="blog-card">
-          <div className="blog-content">
-            <h2 className="blog-title">{blog.content}</h2>
-            <p className="blog-meta">
-              {blog.author} • {blog.updatedAt}
-            </p>
+      {blogs.map((blog) => {
+        const formattedDate = new Date(blog.updatedAt).toLocaleDateString('en-US', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+
+        return (
+          <div key={blog._id} className="blog-card">
+            <div className="blog-content">
+              <h2 className="blog-title">{blog.content}</h2>
+              <p className="blog-meta">
+                {blog.author} • {formattedDate}
+              </p>
+            </div>
+            <div className="blog-image">
+              <img src={blog.imageUrl} alt="Blog" style={{ width: '100px', height: '100px' }} />
+            </div>
           </div>
-          <div className="blog-image">
-            <img src={blog.imageUrl} alt="" style={{ width: '100px', height: '100px' }} />
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </section>
   );
 };

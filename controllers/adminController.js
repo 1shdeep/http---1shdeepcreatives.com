@@ -1,4 +1,5 @@
 const Admin = require('../models/admin');
+const Blog = require('../models/blog');
 const { sendSuccessResponse, sendFailureResponse } = require('../helpers/responseHelper');
 const { generateToken } = require('../helpers/jwtUtils');
 
@@ -50,9 +51,78 @@ const loginAdmin = async (req, res) => {
   }
 };
 
+const createBlog = async (req, res) => {
+  try {
+
+    const { content, author, imageUrl } = req.body;
+    const blog = new Blog({ content, author, imageUrl });
+    await blog.save();
+
+    return sendSuccessResponse(res, 'Blog created successfully', blog, 201);
+  } catch (error) {
+    console.error(error);
+    return sendFailureResponse(res, 'Internal server error', 500);
+  }
+};
+
+const getBlog = async (req, res) => {
+  try {
+    const blogs = await Blog.find();
+    
+    return sendSuccessResponse(res, 'Blogs retrieved successfully', blogs, 200);
+  } catch (error) {
+    console.error(error);
+    return sendFailureResponse(res, 'Internal server error', 500);
+  }
+};
+
+const deleteBlog = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const blog = await Blog.findByIdAndDelete(id);
+
+    if (!blog) {
+      return sendFailureResponse(res, 'Blog not found', 404);
+    }
+
+    return sendSuccessResponse(res, 'Blog deleted successfully', 200);
+  } catch (error) {
+    console.error(error);
+    return sendFailureResponse(res, 'Internal server error', 500);
+  }
+};
+
+const updateBlog = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { content, author, imageUrl } = req.body;
+
+    const updatedBlog = await Blog.findByIdAndUpdate(
+      id,
+      { content, author, imageUrl, updatedAt: Date.now() }, 
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedBlog) {
+      return sendFailureResponse(res, 'Blog not found', 404);
+    }
+
+    return sendSuccessResponse(res, 'Blog updated successfully', updatedBlog, 200);
+  } catch (error) {
+    console.error(error);
+    return sendFailureResponse(res, 'Internal server error', 500);
+  }
+};
+
+
 
 
 module.exports = {
   createAdmin,
-  loginAdmin
+  loginAdmin,
+  createBlog,
+  getBlog,
+  deleteBlog,
+  updateBlog
 };

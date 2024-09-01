@@ -40,9 +40,9 @@ async function connect() {
   }
 }
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
-});
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client/build", "index.html"));
+// });
 
 // Start the server
 app.listen(port, () => {

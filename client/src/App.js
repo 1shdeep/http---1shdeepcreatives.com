@@ -16,6 +16,8 @@ import ClientList from "./AdminPanel/ClientList.jsx";
 import TestimonialsList from "./AdminPanel/TestimonialsList.jsx";
 import ContactList from "./AdminPanel/ContactList.jsx";
 import PrivateRouteAdmin from './utilities/Authorize/PrivateRouteAdmin';
+import Blog from "./AdminPanel/Blog.jsx";
+import BlogList from "./AdminPanel/BlogList.jsx";
 
 
   function App() {
@@ -49,6 +51,8 @@ import PrivateRouteAdmin from './utilities/Authorize/PrivateRouteAdmin';
                 <Route exact path="/TestimonialsList" element={<TestimonialsList />} />
                 <Route exact path="/Uploads" element={<Uploads />} />
                 <Route exact path="/Data" element={<Data />} />
+                <Route exact path="/blog" element={<Blog />} />
+                <Route exact path="/blogList" element={<BlogList />} />
               </Route>
       
             </Routes>

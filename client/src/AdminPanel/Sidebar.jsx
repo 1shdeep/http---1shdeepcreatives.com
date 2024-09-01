@@ -86,7 +86,6 @@ export default function Sidebar() {
                   to="/TestimonialsList"
                 >
                   <CiBoxList style={{ width: "24px", height: "24px" }} />{" "}
-                  {/* Set width and height */}
                   <span>Testimonials List</span>
                 </Link>
               </li>
@@ -98,6 +97,25 @@ export default function Sidebar() {
                 >
                   <TiContacts style={{ width: "24px", height: "24px" }} />{" "}
                   <span>Contact List</span>
+                </Link>
+              </li>
+              <li className="border-t border-gray-600 rounded-sm hover:bg-gray-100">
+                <Link
+                  className="flex items-center p-2 space-x-3 rounded-md"
+                  to="/blog"
+                >
+                  <TiContacts style={{ width: "24px", height: "24px" }} />{" "}
+                  <span>Blog</span>
+                </Link>
+              </li>
+              
+              <li className="border-t border-gray-200 rounded-sm hover:bg-gray-100">
+                <Link
+                  className="flex items-center p-2 space-x-3 rounded-md"
+                  to="/blogList"
+                >
+                  <CiBoxList style={{ width: "24px", height: "24px" }} />{" "}
+                  <span>Blog List</span>
                 </Link>
               </li>
               <li className="border-t border-gray-600 rounded-sm hover:bg-gray-100">
